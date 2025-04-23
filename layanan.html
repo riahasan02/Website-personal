@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - Layanan</title>
+  <link rel="stylesheet" href="css/layanan.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Est<span>Supha</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="Home.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="layanan.html" class="active">Layanan</a></li>
+        <li><a href="project.html">Portofolio</a></li>
+        <li><a href="Kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="Kontak.html" class="btn-header">Hubungi Saya</a>
+  </header>
+
+  <!-- Layanan Section -->
+  <section id="layanan" class="layanan animate">
+    <h2>Layanan Kami</h2>
+    <div class="layanan-container">
+      <div class="service-card animate">
+        <i class="fa-solid fa-paintbrush"></i>
+        <h3>Desain Digital</h3>
+        <p>Menciptakan ilustrasi, branding, dan artwork berkualitas tinggi sesuai kebutuhan Anda.</p>
+      </div>
+      <div class="service-card animate">
+        <i class="fa-solid fa-camera-retro"></i>
+        <h3>Fotografi</h3>
+        <p>Foto profesional untuk produk, event, maupun portofolio pribadi dengan sentuhan artistik.</p>
+      </div>
+      <div class="service-card animate">
+        <i class="fa-solid fa-video"></i>
+        <h3>Videografi</h3>
+        <p>Video promosi, dokumenter singkat, atau cinematic reel yang bercerita dan menarik perhatian.</p>
+      </div>
+      <div class="service-card animate">
+        <i class="fa-solid fa-pencil"></i>
+        <h3>Komik & Ilustrasi</h3>
+        <p>Pembuatan komik, strip, dan ilustrasi karakter yang kreatif dan mudah diingat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animasinya -->
+  <script>
+    const elements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

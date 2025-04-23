@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="css/project.css" />
+  <!-- Optional: Sertakan Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+   
+  <header class="header">
+    <div class="logo">Est<span>Supha</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="home.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="project.html" class="active">Portofolio</a></li>
+        <li><a href="Kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="kontak.html" class="btn-header">Hubungi Saya</a>
+  </header>
+
+  <!-- Section Portofolio -->
+  <section class="portfolio">
+    <h1>Portofolio Saya</h1>
+    <!-- Menu filter portofolio -->
+    <div class="portfolio-menu">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    <!-- Grid Portofolio -->
+    <div class="portfolio-grid">
+      <!-- Contoh Item portofolio -->
+      <div class="portfolio-item web">
+        <img src="Picture/4.jpg" alt="Proyek Web 1" />
+        <div class="portfolio-info">
+          <h3>Proyek Web 1</h3>
+          <p>Deskripsi singkat proyek</p>
+        </div>
+      </div>
+      <div class="portfolio-item mobile">
+        <img src="Picture/7.jpg" alt="Proyek Mobile 1" />
+        <div class="portfolio-info">
+          <h3>Proyek Mobile 1</h3>
+          <p>Deskripsi singkat proyek</p>
+        </div>
+      </div>
+      <div class="portfolio-item design">
+        <img src="Picture/8.jpg" alt="Proyek Design 1" />
+        <div class="portfolio-info">
+          <h3>Proyek Design 1</h3>
+          <p>Deskripsi singkat proyek</p>
+        </div>
+      </div>
+      <div class="portfolio-item web">
+        <img src="Picture/6.jpg" alt="Proyek web 2" />
+        <div class="portfolio-info">
+          <h3>Proyek teh2</h3>
+          <p>Deskripsi singkat proyek</p>
+        </div>
+      </div>
+      <div class="portfolio-item web">
+        <img src="Picture/5.jpg" alt="Proyek Web 2" />
+        <div class="portfolio-info">
+          <h3>Proyek Web 2</h3>
+          <p>Deskripsi singkat proyek</p>
+        </div>
+      <!-- Tambahkan item lainnya sesuai kebutuhan -->
+    </div>
+  </section>
+
+  <!-- Script untuk filter menu -->
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Tambahkan active class ke tombol yang diklik dan hapus dari yang lain
+        filterBtns.forEach(button => button.classList.remove('active'));
+        this.classList.add('active');
+
+        const filter = this.getAttribute('data-filter');
+        portfolioItems.forEach(item => {
+          if(filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

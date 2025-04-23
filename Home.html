@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="css/home.css" />
+   <!-- Tambahkan di <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+          
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header animate">
+    <div class="logo">Est<span>Supha</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="Home.html" class="active">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="project.html">Proyek</a></li>
+        <li><a href="Kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="Kontak.html" class="btn-header">Hubungi Saya</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text animate left">
+      <h1>Hai, Saya <span>Est</span></h1>
+      <h2>Seorang <span>Pengembang Web</span></h2>
+      <p>Saya menciptakan website yang modern dan responsif. Yuk kerja bareng!</p>
+      <div class="social-icons">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/djuhuriati-hasan-b53778355/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          
+      </div>
+      <div class="hero-buttons">
+        <a href="sewa.html" class="btn">Sewa Saya</a>
+        <a href="Kontak.html" class="btn outline">Kontak</a>
+      </div>
+    </div>
+    <div class="hero-img animate right">
+      <img src="Picture/9.jpg" alt="Foto Profil">
+    </div>
+  </section>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const elements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

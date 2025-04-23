@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - Tentang Saya</title>
+  <link rel="stylesheet" href="css/tentang.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Est<span>Supha</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="Home.html">Beranda</a></li>
+        <li><a href="tentang.html" class="active">Tentang</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="project.html">Portofolio</a></li>
+        <li><a href="Kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="#kontak" class="btn-header">Hubungi Saya</a>
+  </header>
+
+  <!-- Tentang Saya -->
+  <section class="tentang animate" id="tentang">
+    <div class="tentang-container">
+      <div class="tentang-img">
+        <img src="Picture/3.jpg" alt="Tentang Saya">
+      </div>
+      <div class="tentang-text">
+        <h2>Tentang Saya</h2>
+        <p>
+          Halo! Saya Est, seorang seniman digital dan pengembang web yang berfokus pada desain visual yang memikat.
+          Dengan pengalaman di bidang ilustrasi, komik, fotografi, dan film pendek, saya percaya bahwa setiap proyek adalah karya seni yang hidup.
+        </p>
+        <p>
+          Saya senang berkolaborasi dan membantu klien menciptakan identitas visual yang kuat melalui web interaktif dan media digital.
+          Mari wujudkan ide kreatifmu jadi nyata!
+        </p>
+        <a href="cv.pdf" class="btn">Lihat CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animasinya -->
+  <script>
+    const elements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

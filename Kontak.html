@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Saya</title>
+  <link rel="stylesheet" href="css/kontak.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Est<span>Supha</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="Home.htmll">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="project.html">Proyek</a></li>
+        <li><a href="Kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="Kontak.html" class="btn-header">Hubungi Saya</a>
+  </header>
+
+  <!-- Kontak Section -->
+  <section class="kontak-section">
+    <h1>Hubungi Saya</h1>
+    <p>Isi form di bawah untuk mengirim pesan, atau hubungi saya langsung lewat media sosial.</p>
+
+    <form class="kontak-form" action="https://formspree.io/forms" method="POST">
+        <input type="text" name="nama" placeholder="Nama Anda" required />
+        <input type="email" name="email" placeholder="Email Anda" required />
+        <textarea name="pesan" placeholder="Pesan Anda..." required></textarea>
+        
+        <!-- Anti-spam -->
+        <input type="text" name="_gotcha" style="display:none" />
+      
+        <!-- Optional: redirect ke halaman sukses -->
+        <input type="hidden" name="_redirect" value="https://yourdomain.com/terkirim.html" />
+        
+        <button type="submit">Kirim Pesan</button>
+      </form>
+      
+    <div class="social-media">
+      <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+</body>
+</html>
